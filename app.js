@@ -1,6 +1,6 @@
 const { response } = require('express');
 const request = require('request');
-const express = require('express');
+
 
 const weatherURL = 'http://api.weatherstack.com/current?access_key=8e187bb7a3480df0435831105d7d51ca&query=39.8267,-122.4233'
 const geocodeURL = 'http://api.ipstack.com/1000:4052:e15:f885:f834:25fc:4d49:ab4?access_key=a5554fc431358a018fb1ba414fea60b4&format=1'
