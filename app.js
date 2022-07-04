@@ -10,7 +10,7 @@ request({ url: weatherURL, json: true }, (error, response) => {
     if(error){
         console.log('Error occured')
     }else if(response.body.error){
-        console.log('unable to find location')
+        console.log('unable to find location.')
     }else{ 
          console.log(response.body.current.weather_descriptions[0] + '. It is currently ' + response.body.current.temperature + ' degress out. It feels like ' + response.body.current.feelslike + ' degress.')
 
