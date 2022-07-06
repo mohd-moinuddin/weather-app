@@ -88,6 +88,7 @@
     "has-flag": "^3.0.0",
     "has-symbols": "^1.0.3",
     "has-yarn": "^2.1.0",
+    "hbs": "^4.2.0",
     "http-cache-semantics": "^4.1.0",
     "http-errors": "^2.0.0",
     "http-signature": "^1.2.0",

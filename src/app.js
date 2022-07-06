@@ -4,20 +4,30 @@ const express = require('express');
 const app = express();
 const publicDirectoryPath = path.join(__dirname,'/public')
 
+app.set('view engine','hbs');
 app.use(express.static(publicDirectoryPath));
 
 
 app.get('',(req,res)=>{
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    res.render('index',{
+        title:'Weather',
+        name :'Moinuddin'
+    })
 })
 
 
 app.get('/help',(req,res)=>{
-    res.sendFile(path.join(__dirname,'/public/help.html'))
+    res.render('help',{
+        title:'i am help',
+        developer :'Moinuddin'
+    })
 })
 
 app.get('/about',(req,res)=>{
-    res.send('<h1>About</h1>')
+    res.render('about',{
+        title:'About me',
+        developer :'Moinuddin'
+    })
 })
 
 app.get('/weather',(req,res)=>{
