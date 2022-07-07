@@ -2,9 +2,16 @@ const path = require('path');
 const express = require('express');
 
 const app = express();
-const publicDirectoryPath = path.join(__dirname,'/public')
 
+//Define paths for Express config
+const publicDirectoryPath = path.join(__dirname,'/public')
+const viewsPath           = path.join(__dirname,'../templates');
+
+//Setup handlebars engine and views location
 app.set('view engine','hbs');
+app.set('views' , viewsPath);
+
+//Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
 
@@ -31,7 +38,7 @@ app.get('/about',(req,res)=>{
 })
 
 app.get('/weather',(req,res)=>{
-    res.send('<h1>Your weather </h1>')
+   res.send('Hi i am weather');
 })
 
 
